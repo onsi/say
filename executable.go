@@ -56,8 +56,9 @@ func Invoke(executable Executable) {
 		}
 	}
 
-	Println(0, Red("Unkown command: %s", os.Args[1]))
+	Println(0, Red("Unknown command: %s", os.Args[1]))
 	usage(executable)
+	os.Exit(1)
 }
 
 func usage(executable Executable) {
@@ -76,7 +77,8 @@ func usage(executable Executable) {
 				}
 			}
 		}
-		Fprintln(os.Stderr, 0, Red("Unkown command: %s", os.Args[2]))
+		Fprintln(os.Stderr, 0, Red("Unknown command: %s", os.Args[2]))
+
 	}
 
 	Fprintln(os.Stderr, 0, Green(executable.Name))
