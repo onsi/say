@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const SAY_VERSION = "1.0.0"
+const SAY_VERSION = "1.1.0"
 
 const COLS = 80
 
