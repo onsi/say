@@ -21,6 +21,10 @@ const (
 	ColorModePassthrough
 )
 
+func ClearScrollBack() {
+	fmt.Print("\033[H\033[2J\033]1337;ClearScrollback\007")
+}
+
 var SingletonFormatter = New(ColorModeTerminal)
 
 func F(format string, args ...interface{}) string {
